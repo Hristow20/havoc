@@ -2064,6 +2064,8 @@ local function main()
 			local sList = selection.List
 			local plrRP = plr.Character and plr.Character:FindFirstChild("HumanoidRootPart")
 
+			if not Settings.Explorer.TeleportToOffset then Settings.Explorer.TeleportToOffset = Vector3.new(0,0,0) end
+
 			if not plrRP then return end
 
 			for _,node in next, sList do
